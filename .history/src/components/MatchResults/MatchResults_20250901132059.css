@@ -1,0 +1,210 @@
+/* src/components/MatchResults/MatchResults.css */
+.match-results {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem; /* Reduced from 2rem */
+  box-shadow: var(--shadow-md);
+}
+
+.results-title {
+  font-size: 1.125rem; /* Reduced from 1.25rem */
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem; /* Reduced from 2rem */
+  padding-bottom: 0.75rem; /* Reduced from 1rem */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.matches-grid {
+  display: grid;
+  gap: 1rem; /* Reduced from 1.5rem */
+}
+
+.match-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem; /* Reduced from 1.5rem */
+  transition: all 0.3s ease;
+}
+
+.match-card:hover {
+  background: var(--bg-hover);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.match-header {
+  margin-bottom: 1rem; /* Reduced from 1.5rem */
+  padding-bottom: 0.75rem; /* Reduced from 1rem */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.match-target {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.target-color {
+  width: 48px; /* Reduced from 56px */
+  height: 48px; /* Reduced from 56px */
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.target-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.target-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.target-hex {
+  font-size: 1rem; /* Reduced from 1.125rem */
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.match-paints {
+  display: grid;
+  gap: 0.5rem; /* Reduced from 0.75rem */
+}
+
+.paint-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto; /* Reduced from 48px */
+  gap: 0.75rem; /* Reduced from 1rem */
+  align-items: center;
+  padding: 0.75rem; /* Reduced from 1rem */
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.paint-item:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-light);
+  transform: translateX(4px);
+}
+
+.paint-swatch {
+  width: 40px; /* Reduced from 48px */
+  height: 40px; /* Reduced from 48px */
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.paint-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* Reduced from 0.375rem */
+}
+
+.paint-name {
+  font-weight: 600;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  color: var(--text-primary);
+}
+
+.paint-details {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8rem; /* Reduced from 0.875rem */
+}
+
+.paint-range {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.paint-finish {
+  color: var(--text-secondary);
+}
+
+.paint-meta {
+  display: flex;
+  gap: 0.75rem; /* Reduced from 1rem */
+  font-size: 0.7rem; /* Reduced from 0.75rem */
+  font-family: 'Courier New', monospace;
+}
+
+.paint-hex {
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.paint-delta {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.paint-accuracy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem; /* Reduced from 0.375rem */
+  min-width: 90px; /* Reduced from 100px */
+}
+
+.accuracy-bar {
+  width: 80px; /* Reduced from 100px */
+  height: 5px; /* Reduced from 6px */
+  background: var(--bg-primary);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.accuracy-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 2px;
+}
+
+.accuracy-label {
+  font-size: 0.7rem; /* Reduced from 0.75rem */
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .match-results {
+    padding: 1rem; /* Reduced from 1.5rem */
+  }
+  
+  .paint-item {
+    grid-template-columns: 36px 1fr; /* Reduced from 40px */
+    padding: 0.625rem; /* Reduced from 0.875rem */
+  }
+
+  .paint-accuracy {
+    display: none;
+  }
+  
+  .paint-swatch {
+    width: 36px; /* Reduced from 40px */
+    height: 36px; /* Reduced from 40px */
+  }
+
+  .target-color {
+    width: 40px; /* Reduced from 48px */
+    height: 40px; /* Reduced from 48px */
+  }
+}
