@@ -3,7 +3,10 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import PaintMatcher from './components/PaintMatcher/PaintMatcher';
+import Features from './components/Features/Features';
+import Services from './components/Services/Services';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -11,7 +14,10 @@ function App() {
     <div className="app">
       <Header />
       <Hero />
-      <PaintMatcher />
+      <Features />
+      <Services />
+      <About />
+      <Contact />
       <Footer />
     </div>
   );
