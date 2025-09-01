@@ -94,6 +94,7 @@ export default function App() {
     setBusy(true);
     setError("");
     try {
+      console.log("Calling API:", `${API_BASE}/match-hex`, "palette:", palette);
       const res = await fetch(`${API_BASE}/match-hex`, {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -150,7 +151,7 @@ export default function App() {
 
         <button
           onClick={fetchMatches}
-          disabled={!palette.length || loading || busy}
+          disabled={!palette.length || loading || busy}   {/* <-- fixed */}
           style={{
             padding: "10px 14px",
             borderRadius: 8,
